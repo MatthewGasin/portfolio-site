@@ -19,7 +19,7 @@ export const ThemeContext = createContext<ThemeContextProps>({
 });
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState<ThemeType>('light');
+  const [currentTheme, setCurrentTheme] = useState<ThemeType>('dark');
   const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
