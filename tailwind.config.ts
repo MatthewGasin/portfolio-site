@@ -1,19 +1,14 @@
 import type { Config } from 'tailwindcss';
 
 const fontFamily = {
-  roboto: ['Roboto', 'ui-sans-serif', 'system-ui', '-apple-system', 'Arial', 'sans-serif'],
+  roboto: ['Roboto Mono', 'ui-sans-serif', 'system-ui', '-apple-system', 'Arial', 'sans-serif'],
+  inconsolata: ['Inconsolata', 'ui-sans-serif', 'system-ui', '-apple-system', 'Arial', 'sans-serif'],
 };
 
 const boxShadow = {
   sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);',
   md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
   lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-  blue: '0 5px 40px 0 rgba(8, 52, 152, .2)',
-  blueHover: '0 10px 60px 0 rgba(8, 52, 152, .4)',
-  red: '0 5px 40px 0 rgba(168, 8, 8, .2)',
-  redHover: '0 10px 60px 0 rgba(168, 8, 8, .4)',
-  yellow: '0 5px 40px 0 rgba(220, 220, 60, .2)',
-  yellowHover: '0 10px 60px 0 rgba(220, 220, 60, .4)',
 };
 
 const colors = {
@@ -32,16 +27,37 @@ const colors = {
     800: '#1e293b',
     900: '#0f172a',
   },
+  primary: {
+    50: '#eee9f0',
+    100: '#8E709F',
+    300: '#582A72',
+    500: '#2D0344',
+    800: '#1C002C',
+  },
+  magenta: {
+    50: '#f3eaef',
+    100: '#dfc1d2',
+    300: '#882D60',
+    500: '#52002E',
+    800: '#34001E',
+  },
+  sapphire: {
+    50: '#ebeaf1',
+    100: '#c0bad1',
+    300: '#403075',
+    500: '#160847',
+    800: '#0B012D',
+  },
   blue: {
-    50: '#cedaf5',
-    100: '#9eb6eb',
-    200: '#6d91e0',
-    300: '#3d6dd6',
-    400: '#0c48cc',
-    500: '#0a3aa3',
-    600: '#072b7a',
-    700: '#051d52',
-    800: '#020e29',
+    50: '#f7f9fb',
+    100: '#eff4f8',
+    200: '#d8e5ee',
+    300: '#c9dae7',
+    400: '#b2cbde',
+    500: '#8ea2b1',
+    600: '#6a7985',
+    700: '#475158',
+    800: '#23282c',
   },
   yellow: {
     50: '#f8f8d8',
@@ -68,11 +84,18 @@ const colors = {
 };
 
 const config: Config = {
+  mode: 'jit',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily,
     colors,
     boxShadow,
+    extend: {
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
+    },
   },
   plugins: [],
 };
