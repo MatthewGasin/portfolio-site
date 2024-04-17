@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority';
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 import { useTheme } from 'contexts/DarkModeContext';
 import { twMerge } from 'tailwind-merge';
 
@@ -96,7 +96,7 @@ const timelineEntryContent = cva([], {
     type: {
       title: ['text-xl', 'font-semibold'],
       location: ['text-lg', 'font-normal', 'italic'],
-      description: ['text-md'],
+      description: ['text-sm'],
     },
   },
 });
@@ -114,8 +114,8 @@ const Timeline: FC<TimelineProps> = ({ heading, entries }) => {
           const isReversed = i % 2 === 0;
 
           return (
-            <>
-              <li key={title} className={twMerge(timelineEntryRow())}>
+            <Fragment key={title}>
+              <li className={twMerge(timelineEntryRow())}>
                 <div className={twMerge(timelineEntryColumn({ isReversed, type: 'date' }))}>
                   <div className={twMerge(timelineDateContainer({ isReversed }))}>
                     <div className={twMerge(timelineDate({ theme }))}>
@@ -139,7 +139,7 @@ const Timeline: FC<TimelineProps> = ({ heading, entries }) => {
                 Array(gap)
                   .fill(gap)
                   .map((e, index) => <div key={`${e}${index}`}></div>)}
-            </>
+            </Fragment>
           );
         })}
       </ul>
