@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     @apply font-roboto;
+}
+
+.highlight-text {
+    @apply bg-[length:200%_200%] bg-pos-0 hover:bg-pos-100;
+}
+
+/* section animations */
+section {
+    @apply blur-lg transition-all duration-300 ease-in-out motion-reduce:blur-0;
+}
+
+section.section-odd {
+    @apply translate-x-1/2 motion-reduce:translate-x-0;
+}
+
+section.section-even {
+    @apply -translate-x-1/2 motion-reduce:translate-x-0;
+}
+
+section.section-odd.active, section.section-even.active, section.section-first {
+    @apply blur-0 translate-x-0;
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-blue-200 dark:bg-gray-700;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-300 dark:bg-blue-800 rounded-2xl transition-all duration-300 ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-200 dark:bg-blue-700;
 }

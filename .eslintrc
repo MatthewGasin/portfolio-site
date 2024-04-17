@@ -38,6 +38,7 @@
     "mdx/language-mapper": {}
   },
   "rules": {
+
     "curly": "error",
     "eqeqeq": ["error", "smart"],
     "no-lonely-if": "error",
@@ -65,7 +66,6 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "@typescript-eslint/consistent-type-imports": "warn",
     "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/member-delimiter-style": "warn",
@@ -73,13 +73,15 @@
     "import/default": "error",
     "import/no-named-as-default-member": "warn",
     "import/no-named-default": "error",
+    "import/no-unresolved": [
+      "off"
+    ],
     "import/newline-after-import": "warn",
     "jsx-quotes": ["error", "prefer-double"],
     "react/display-name": 0,
     "react/react-in-jsx-scope": 0,
     "react-hooks/exhaustive-deps": "off",
-    "no-relative-import-paths/no-relative-import-paths": ["error", { "allowSameFolder": false, "rootDir": "src" }],
-    "react/destructuring-assignment": "error",
+    "no-relative-import-paths/no-relative-import-paths": ["warn", { "allowSameFolder": false, "rootDir": "src" }],
     "react/jsx-filename-extension": [2, { "extensions": [".tsx", ".jsx", ".mdx"] }],
     "react/require-default-props": [0, { "forbidDefaultForRequired": true }],
     "react/no-unused-prop-types": 1,
