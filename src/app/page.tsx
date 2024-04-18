@@ -11,7 +11,6 @@ import Switchback from 'components/switchback';
 import List from 'components/list';
 import Timeline from 'components/timeline';
 import Widget from 'components/layout/widget';
-import Deck from 'components/deck';
 
 const Home = () => (
   <ThemeProvider>
@@ -105,33 +104,6 @@ const Home = () => (
               title: getContent('timeline.entry5.title'),
               location: getContent('timeline.entry5.location'),
               description: getContent('timeline.entry5.description'),
-            },
-          ]}
-        />
-      </Section>
-      <Section id="Projects" background="primary" index={4}>
-        <Deck
-          heading={getContent('deck.heading')}
-          cards={[
-            {
-              heading: getContent('deck.card1.heading'),
-              subhead: getContent('deck.card1.subhead'),
-              image: '/projects/bwcalculator.png',
-            },
-            {
-              heading: getContent('deck.card2.heading'),
-              subhead: getContent('deck.card2.subhead'),
-              image: '/projects/gempuzzle.png',
-            },
-            {
-              heading: getContent('deck.card3.heading'),
-              subhead: getContent('deck.card3.subhead'),
-              image: '/projects/tutormatch.png',
-            },
-            {
-              heading: getContent('deck.card4.heading'),
-              subhead: getContent('deck.card4.subhead'),
-              image: '/projects/yakking.png',
             },
           ]}
         />
