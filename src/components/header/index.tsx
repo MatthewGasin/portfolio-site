@@ -41,7 +41,8 @@ const headerRow = cva(['flex', 'flex-row', 'gap-4', 'md:gap-12', 'flex-wrap']);
 const headerEntry = cva(
   [
     'font-normal',
-    'text-xl',
+    'text-sm',
+    'md:text-xl',
     'capitalize',
     'relative',
     'after:content-[ ]',

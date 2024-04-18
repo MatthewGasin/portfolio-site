@@ -42,7 +42,7 @@ const Home = () => (
           items={[
             'TypeScript',
             'JavaScript',
-            'Web Development',
+            'Web Dev',
             'React',
             'NextJS',
             'Gatsby',
