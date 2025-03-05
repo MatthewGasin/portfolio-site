@@ -105,6 +105,12 @@ const Home = () => (
               location: getContent('timeline.entry5.location'),
               description: getContent('timeline.entry5.description'),
             },
+            {
+              date: getContent('timeline.entry6.date'),
+              title: getContent('timeline.entry6.title'),
+              location: getContent('timeline.entry6.location'),
+              description: getContent('timeline.entry6.description'),
+            },
           ]}
         />
       </Section>
